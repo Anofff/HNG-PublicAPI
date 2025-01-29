@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from datetime import datetime
+from datetime import datetime,timezone
 
 app = FastAPI()
 
@@ -15,9 +15,10 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    current_datetime = datetime.utcnow()
+    current_datetime_utc = datetime.now(timezone.utc)
+    iso_8601_utc = current_datetime_utc.isoformat()
     return {
   "email": "anoffcaleb@gmail.com",
-  "current_datetime": current_datetime,
+  "current_datetime": iso_8601_utc,
   "github_url": "https://github.com/Anofff/HNG12-PublicAPI"
 }   
