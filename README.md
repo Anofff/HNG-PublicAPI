@@ -58,11 +58,7 @@ uvicorn app:app --host 0.0.0.0 --port 8000
 ### **4. Access the API**
 - Base URL: `http://127.0.0.1:8000/`
 - Swagger UI: `http://127.0.0.1:8000/docs`
-
-
-## Access the API
-
-You can access this API remotely at: [HNG-PublicAPI](https://hng-publicapi.onrender.com)
+- You can access this API remotely at: [HNG-PublicAPI](https://hng-publicapi.onrender.com)
 
 ## Documentation
 
