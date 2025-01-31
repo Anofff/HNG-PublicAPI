@@ -1,4 +1,5 @@
 # HNG-PublicAPI
+
 # FastAPI Public API for HNG12 Stage 0 Task
 
 This repository contains a simple FastAPI-based public API that fulfills the HNG12 Stage 0 backend task requirements. The API provides basic information including the current UTC datetime, registered email address, and the GitHub repository URL.
@@ -57,24 +58,7 @@ uvicorn app:app --host 0.0.0.0 --port 8000
 ### **4. Access the API**
 - Base URL: `http://127.0.0.1:8000/`
 - Swagger UI: `http://127.0.0.1:8000/docs`
-
-## Deployment Instructions
-
-### **1. Deploy to Render**
-This API can be deployed to Render. Follow these steps:
-
-1. Push your code to GitHub.
-2. Log in to [Render](https://render.com) and create a new Web Service.
-3. Use the following configurations:
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn app:app --host 0.0.0.0 --port $PORT`
-4. Deploy and note the public URL provided by Render.
-
-### **2. Test the Public API**
-Once deployed, access the API at the public URL, e.g.,:
-```
-https://your-app.onrender.com/
-```
+- You can access this API remotely at: [HNG-PublicAPI](https://hng-publicapi.onrender.com)
 
 ## Documentation
 
