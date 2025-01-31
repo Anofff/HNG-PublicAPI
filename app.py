@@ -16,7 +16,8 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     current_datetime_utc = datetime.now(timezone.utc)
-    iso_8601_utc = current_datetime_utc.isoformat()
+    iso_8601_utc = current_datetime_utc.isoformat(timespec="seconds") + "Z"  
+
     return {
   "email": "anoffcaleb@gmail.com",
   "current_datetime": iso_8601_utc,
