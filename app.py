@@ -14,7 +14,7 @@ app.add_middleware(
 )
 
 @app.get("/")
-def read_root():
+async def read_root():
     current_datetime_utc = datetime.now(timezone.utc)
     iso_8601_utc = current_datetime_utc.isoformat(timespec="seconds").replace("+00:00", "Z")
 
